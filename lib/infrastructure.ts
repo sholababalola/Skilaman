@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+import 'source-map-support/register';
+import * as cdk from 'aws-cdk-lib';
+import { StorageStack } from './storage-stack';
+
+
+const app = new cdk.App();
+new StorageStack(app, 'InfrastructureStack-alpha', {
+  stage: "prod",
+  stackName: "StorageStack",
+});
+
+
+
